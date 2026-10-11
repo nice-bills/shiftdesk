@@ -1,7 +1,7 @@
 {
  "submission_id": "shiftdesk-v1",
  "name": "ShiftDesk: eight-domain tool desk with shifting tool names",
- "image": "ghcr.io/nice-bills/shiftdesk:v1",
+ "image": "ghcr.io/nice-bills/shiftdesk@sha256:194b4115267cee5e9eb0207e400fe95109fe0b382ceabe82719d57f1b42bcef7",
  "tasks": [
   {
    "task_id": "module-repair-L1",

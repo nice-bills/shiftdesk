@@ -1,0 +1,371 @@
+{
+ "submission_id": "shiftdesk-v1",
+ "name": "ShiftDesk: eight-domain tool desk with shifting tool names",
+ "image": "ghcr.io/nice-bills/shiftdesk:v1",
+ "tasks": [
+  {
+   "task_id": "module-repair-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "module-repair-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "module-repair-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "line-oee-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "line-oee-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "line-oee-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "kinetics-lab-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "kinetics-lab-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "kinetics-lab-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "expense-policy-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "expense-policy-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "expense-policy-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "loan-desk-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "loan-desk-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "loan-desk-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-count-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-count-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-count-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "auth-hunt-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "auth-hunt-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "auth-hunt-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "subtitle-qc-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "subtitle-qc-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "subtitle-qc-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  }
+ ],
+ "example_actions": [
+  {
+   "tool": "end_episode",
+   "args": {}
+  }
+ ],
+ "finish_action": {
+  "tool": "end_episode",
+  "args": {}
+ },
+ "dataset": "nice-bill/shiftdesk",
+ "source": "https://github.com/nice-bills/shiftdesk",
+ "schema": {
+  "action": {
+   "properties": {
+    "metadata": {
+     "additionalProperties": true,
+     "description": "Additional metadata for the action",
+     "title": "Metadata",
+     "type": "object"
+    },
+    "tool": {
+     "default": "",
+     "description": "Name of a tool listed in the task.",
+     "title": "Tool",
+     "type": "string"
+    },
+    "args": {
+     "additionalProperties": true,
+     "description": "Arguments for that tool.",
+     "title": "Args",
+     "type": "object"
+    }
+   },
+   "title": "DeskAction",
+   "type": "object"
+  },
+  "observation": {
+   "additionalProperties": false,
+   "properties": {
+    "done": {
+     "default": false,
+     "description": "Whether the episode has terminated",
+     "title": "Done",
+     "type": "boolean"
+    },
+    "reward": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "integer"
+      },
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Reward signal from the last action",
+     "title": "Reward"
+    },
+    "metadata": {
+     "additionalProperties": true,
+     "description": "Additional metadata for the observation",
+     "title": "Metadata",
+     "type": "object"
+    },
+    "task_id": {
+     "default": "",
+     "description": "Task being played",
+     "title": "Task Id",
+     "type": "string"
+    },
+    "output": {
+     "default": "",
+     "description": "Task text at reset, then the result of the last call",
+     "title": "Output",
+     "type": "string"
+    },
+    "ok": {
+     "default": true,
+     "description": "False when the last call was invalid",
+     "title": "Ok",
+     "type": "boolean"
+    },
+    "calls_left": {
+     "default": 0,
+     "description": "Tool calls left, the final answer included",
+     "title": "Calls Left",
+     "type": "integer"
+    }
+   },
+   "title": "DeskObservation",
+   "type": "object"
+  }
+ }
+}

@@ -1,4 +1,5 @@
-"""Play every task over the WebSocket protocol the way the arena does: example action ends it in [0,1]."""
+"""Play every task over the WebSocket protocol the way the arena does: the example/finish action
+({"tool": "submit", "args": {"answer": ""}}) ends it with a reward in [0, 1]."""
 import sys
 from openenv.core.generic_client import GenericEnvClient
 sys.path.insert(0, '.')
@@ -14,7 +15,13 @@ for tid in task_ids():
         assert len(r.observation.get("output", "")) > 50
         r = env.step({"tool": "nonexistent_tool", "args": {}})
         assert not r.done and r.observation.get("ok") is False
-        r = env.step({"tool": "end_episode", "args": {}})
+        r = env.step({"tool": "list_files", "args": {}})
+        assert not r.done and r.observation.get("ok") is True
+        r = env.step({"tool": "run_python", "args": {"code": "import os\nprint('N', len(os.listdir()))\n"
+                      "try:\n    open('/app/salt').read(); print('SALT READABLE')\nexcept OSError:\n    print('salt hidden')"}})
+        out = r.observation.get("output", "")
+        assert not r.done and "N " in out and "SALT READABLE" not in out, out
+        r = env.step({"tool": "submit", "args": {"answer": ""}})
         ok = r.done and r.reward is not None and 0.0 <= float(r.reward) <= 1.0
         bad += not ok
         print(tid, "done", r.done, "reward", r.reward)

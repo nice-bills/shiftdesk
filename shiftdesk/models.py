@@ -1,8 +1,7 @@
 """Actions and observations for ShiftDesk.
 
-An action is one tool call: {"tool": "<name>", "args": {...}}. The tool names
-and argument names change from episode to episode and are listed in the reset
-observation, so the policy has to read them instead of memorizing them.
+An action is one tool call: {"tool": "<name>", "args": {...}}. The tools
+(list_files, read_file, run_python, submit) are listed in the reset observation.
 """
 from typing import Any
 
@@ -13,8 +12,8 @@ from pydantic import ConfigDict, Field
 class DeskAction(Action):
     model_config = ConfigDict(extra="ignore")
 
-    tool: str = Field(default="", description="Name of a tool listed in the task.")
-    args: dict[str, Any] = Field(default_factory=dict, description="Arguments for that tool.")
+    tool: str = Field(default="", description="Tool name: list_files, read_file, run_python or submit.")
+    args: dict[str, Any] = Field(default_factory=dict, description="Arguments for that tool, e.g. {\"path\": \"data.csv\"} or {\"answer\": ...}.")
 
 
 class DeskObservation(Observation):

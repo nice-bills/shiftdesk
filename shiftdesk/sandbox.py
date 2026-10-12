@@ -19,16 +19,18 @@ MEMORY_BYTES = 768 * 1024 * 1024
 NOBODY = 65534
 
 
-def _limits() -> None:
-    os.setsid()
-    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
-    resource.setrlimit(resource.RLIMIT_CPU, (CPU_SECONDS, CPU_SECONDS + 1))
-    resource.setrlimit(resource.RLIMIT_AS, (MEMORY_BYTES, MEMORY_BYTES))
-    resource.setrlimit(resource.RLIMIT_FSIZE, (2 * 1024 * 1024, 2 * 1024 * 1024))
-    resource.setrlimit(resource.RLIMIT_NPROC, (64, 64))
-    if os.geteuid() == 0:
-        os.setgid(NOBODY)
-        os.setuid(NOBODY)
+# Limits are set inside the child by this prelude (no preexec_fn: it can deadlock
+# a threaded server between fork and exec). The user switch is done by Popen itself.
+PRELUDE = (
+    "import resource as r, runpy, sys\n"
+    "r.setrlimit(r.RLIMIT_CORE, (0, 0))\n"
+    f"r.setrlimit(r.RLIMIT_CPU, ({CPU_SECONDS}, {CPU_SECONDS + 1}))\n"
+    f"r.setrlimit(r.RLIMIT_AS, ({MEMORY_BYTES}, {MEMORY_BYTES}))\n"
+    "r.setrlimit(r.RLIMIT_FSIZE, (2097152, 2097152))\n"
+    "r.setrlimit(r.RLIMIT_NPROC, (64, 64))\n"
+    "sys.argv = [sys.argv[1]]\n"
+    "runpy.run_path(sys.argv[0], run_name='__main__')\n"
+)
 
 
 def run_python(source: object, files: dict[str, str]) -> tuple[bool, str]:
@@ -54,14 +56,16 @@ def run_python(source: object, files: dict[str, str]) -> tuple[bool, str]:
         with open(script, "w", encoding="utf-8") as fh:
             fh.write(source + "\n")
         os.chmod(script, 0o444)
+        drop = {"user": NOBODY, "group": NOBODY, "extra_groups": []} if os.geteuid() == 0 else {}
         proc = subprocess.Popen(
-            [sys.executable, "-E", "-s", "-B", script],
+            [sys.executable, "-E", "-s", "-B", "-c", PRELUDE, script],
             cwd=root,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             stdin=subprocess.DEVNULL,
-            preexec_fn=_limits,
+            start_new_session=True,
             env={"PATH": "/usr/local/bin:/usr/bin:/bin", "HOME": "/tmp", "PYTHONIOENCODING": "utf-8"},
+            **drop,
         )
         try:
             out, _ = proc.communicate(timeout=WALL_TIMEOUT_S)
@@ -74,6 +78,11 @@ def run_python(source: object, files: dict[str, str]) -> tuple[bool, str]:
             out, _ = proc.communicate()
             timed_out = True
         text = out.decode("utf-8", "replace")
+        text = "\n".join(l for l in text.split("\n")
+                         if not l.startswith(('  File "<string>"', '  File "<frozen runpy>"')))
+        text = text.replace(root + "/", "")
+        if not timed_out and proc.returncode is not None and proc.returncode < 0:
+            text += f"\n[process killed by signal {-proc.returncode}: CPU or memory limit]"
         if len(text) > MAX_OUTPUT_CHARS:
             text = text[:MAX_OUTPUT_CHARS] + f"\n[output cut at {MAX_OUTPUT_CHARS} characters]"
         if timed_out:

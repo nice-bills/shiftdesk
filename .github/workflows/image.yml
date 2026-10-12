@@ -20,6 +20,8 @@ jobs:
         run: |
           pip install -q -r requirements.txt
           pip install -q --no-deps vendor/openenv-0.6.1.dev0-py3-none-any.whl
+          python tests_families.py 60
+          python tests_solvers_v3.py 60
           python tests_solvers.py
           python tests_episodes.py
       - uses: docker/setup-buildx-action@v3

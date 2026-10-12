@@ -1,10 +1,10 @@
 {
- "submission_id": "shiftdesk-v1",
- "name": "ShiftDesk: eight-domain tool desk with shifting tool names",
- "image": "ghcr.io/nice-bills/shiftdesk@sha256:194b4115267cee5e9eb0207e400fe95109fe0b382ceabe82719d57f1b42bcef7",
+ "submission_id": "shiftdesk-v3",
+ "name": "ShiftDesk v3: eight-domain desk work with plain tools and all-or-nothing JSON answers",
+ "image": "ghcr.io/nice-bills/shiftdesk@sha256:05ebbcd71877c1ce297cac52a8b4e1cf7cb3a14ba0a69bc5dc21033ba9b9794a",
  "tasks": [
   {
-   "task_id": "module-repair-L1",
+   "task_id": "change-impact-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -15,7 +15,29 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "module-repair-L2",
+   "task_id": "change-impact-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "version-resolve-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "version-resolve-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -37,7 +59,40 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "line-oee-L1",
+   "task_id": "bom-explosion-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bom-explosion-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "tank-balance-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "tank-balance-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -70,7 +125,7 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "kinetics-lab-L1",
+   "task_id": "beer-lambert-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -81,7 +136,29 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "kinetics-lab-L2",
+   "task_id": "beer-lambert-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "stoichiometry-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "stoichiometry-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -103,7 +180,7 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "expense-policy-L1",
+   "task_id": "meeting-slot-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -114,7 +191,29 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "expense-policy-L2",
+   "task_id": "meeting-slot-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "invoice-match-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "invoice-match-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -136,7 +235,7 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "loan-desk-L1",
+   "task_id": "npv-choice-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -147,7 +246,51 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "loan-desk-L2",
+   "task_id": "npv-choice-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bond-desk-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bond-desk-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "fifo-basis-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "fifo-basis-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -169,7 +312,7 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "exact-count-L1",
+   "task_id": "congruences-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -180,7 +323,73 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "exact-count-L2",
+   "task_id": "congruences-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "logic-grid-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "logic-grid-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "shortest-route-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "shortest-route-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-probability-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-probability-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -202,7 +411,7 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "auth-hunt-L1",
+   "task_id": "firewall-audit-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -213,7 +422,29 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "auth-hunt-L2",
+   "task_id": "firewall-audit-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "vuln-triage-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "vuln-triage-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -235,7 +466,7 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "subtitle-qc-L1",
+   "task_id": "edit-timeline-L1",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -246,7 +477,29 @@
    "context_tokens": 16384
   },
   {
-   "task_id": "subtitle-qc-L2",
+   "task_id": "edit-timeline-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "headline-style-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "headline-style-L2",
    "split": "train",
    "reset_wall_s": 180,
    "rollout_wall_s": 1200,
@@ -270,13 +523,17 @@
  ],
  "example_actions": [
   {
-   "tool": "end_episode",
-   "args": {}
+   "tool": "submit",
+   "args": {
+    "answer": ""
+   }
   }
  ],
  "finish_action": {
-  "tool": "end_episode",
-  "args": {}
+  "tool": "submit",
+  "args": {
+   "answer": ""
+  }
  },
  "dataset": "nice-bill/shiftdesk",
  "source": "https://github.com/nice-bills/shiftdesk",
@@ -291,13 +548,13 @@
     },
     "tool": {
      "default": "",
-     "description": "Name of a tool listed in the task.",
+     "description": "Tool name: list_files, read_file, run_python or submit.",
      "title": "Tool",
      "type": "string"
     },
     "args": {
      "additionalProperties": true,
-     "description": "Arguments for that tool.",
+     "description": "Arguments for that tool, e.g. {\"path\": \"data.csv\"} or {\"answer\": ...}.",
      "title": "Args",
      "type": "object"
     }

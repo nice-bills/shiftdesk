@@ -1,0 +1,628 @@
+{
+ "submission_id": "shiftdesk-v3",
+ "name": "ShiftDesk v3: eight-domain desk work with plain tools and all-or-nothing JSON answers",
+ "image": "ghcr.io/nice-bills/shiftdesk@sha256:05ebbcd71877c1ce297cac52a8b4e1cf7cb3a14ba0a69bc5dc21033ba9b9794a",
+ "tasks": [
+  {
+   "task_id": "change-impact-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "change-impact-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "version-resolve-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "version-resolve-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "module-repair-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bom-explosion-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bom-explosion-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "tank-balance-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "tank-balance-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "line-oee-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "line-oee-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "beer-lambert-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "beer-lambert-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "stoichiometry-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "stoichiometry-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "kinetics-lab-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "meeting-slot-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "meeting-slot-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "invoice-match-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "invoice-match-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "expense-policy-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "npv-choice-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "npv-choice-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bond-desk-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "bond-desk-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "fifo-basis-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "fifo-basis-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "loan-desk-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "congruences-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "congruences-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "logic-grid-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "logic-grid-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "shortest-route-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "shortest-route-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-probability-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-probability-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "exact-count-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "firewall-audit-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "firewall-audit-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "vuln-triage-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "vuln-triage-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "auth-hunt-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "edit-timeline-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "edit-timeline-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "headline-style-L1",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "headline-style-L2",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  },
+  {
+   "task_id": "subtitle-qc-L3",
+   "split": "train",
+   "reset_wall_s": 180,
+   "rollout_wall_s": 1200,
+   "verifier_wall_s": 120,
+   "tool_wall_s": 60,
+   "tool_calls_total": 16,
+   "completion_tokens": 12288,
+   "context_tokens": 16384
+  }
+ ],
+ "example_actions": [
+  {
+   "tool": "submit",
+   "args": {
+    "answer": ""
+   }
+  }
+ ],
+ "finish_action": {
+  "tool": "submit",
+  "args": {
+   "answer": ""
+  }
+ },
+ "dataset": "nice-bill/shiftdesk",
+ "source": "https://github.com/nice-bills/shiftdesk",
+ "schema": {
+  "action": {
+   "properties": {
+    "metadata": {
+     "additionalProperties": true,
+     "description": "Additional metadata for the action",
+     "title": "Metadata",
+     "type": "object"
+    },
+    "tool": {
+     "default": "",
+     "description": "Tool name: list_files, read_file, run_python or submit.",
+     "title": "Tool",
+     "type": "string"
+    },
+    "args": {
+     "additionalProperties": true,
+     "description": "Arguments for that tool, e.g. {\"path\": \"data.csv\"} or {\"answer\": ...}.",
+     "title": "Args",
+     "type": "object"
+    }
+   },
+   "title": "DeskAction",
+   "type": "object"
+  },
+  "observation": {
+   "additionalProperties": false,
+   "properties": {
+    "done": {
+     "default": false,
+     "description": "Whether the episode has terminated",
+     "title": "Done",
+     "type": "boolean"
+    },
+    "reward": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "integer"
+      },
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Reward signal from the last action",
+     "title": "Reward"
+    },
+    "metadata": {
+     "additionalProperties": true,
+     "description": "Additional metadata for the observation",
+     "title": "Metadata",
+     "type": "object"
+    },
+    "task_id": {
+     "default": "",
+     "description": "Task being played",
+     "title": "Task Id",
+     "type": "string"
+    },
+    "output": {
+     "default": "",
+     "description": "Task text at reset, then the result of the last call",
+     "title": "Output",
+     "type": "string"
+    },
+    "ok": {
+     "default": true,
+     "description": "False when the last call was invalid",
+     "title": "Ok",
+     "type": "boolean"
+    },
+    "calls_left": {
+     "default": 0,
+     "description": "Tool calls left, the final answer included",
+     "title": "Calls Left",
+     "type": "integer"
+    }
+   },
+   "title": "DeskObservation",
+   "type": "object"
+  }
+ }
+}

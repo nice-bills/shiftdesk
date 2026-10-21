@@ -4,6 +4,12 @@ FROM python:3.12-slim
 WORKDIR /app/env
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1 PYTHONPATH=/app/env
 
+# CLI tools the policy's bash tool offers (python3 comes with the base image).
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends jq sqlite3 bc openssl file util-linux \
+      $(apt-cache show setpriv >/dev/null 2>&1 && echo setpriv) \
+ && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY vendor ./vendor

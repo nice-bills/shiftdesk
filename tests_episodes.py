@@ -12,8 +12,18 @@ for tid in task_ids():
     o = e.reset(seed=7, task_id=tid)
     b = e._ep['built']
     assert o.calls_left == b.budget and not o.done and len(o.output) < 3000, (tid, len(o.output))
-    for name in ('list_files', 'read_file', 'run_python', 'submit'):
+    for name in ('list_files', 'read_file', 'write_file', 'bash', 'run_python', 'submit'):
         assert name in o.output
+    deliv = b.deliverable
+
+    def give(env, content):
+        """File tasks: write the deliverable, then submit an empty answer. Answer tasks: submit the answer."""
+        if deliv:
+            if content not in (None, ''):
+                r = env.step(DeskAction(tool='write_file', args={'path': deliv, 'content': content}))
+                assert r.ok and not r.done, r.output
+            return env.step(DeskAction(tool='submit', args={'answer': ''}))
+        return env.step(DeskAction(tool='submit', args={'answer': content}))
     o = e.step(DeskAction(tool='list_files', args={}))
     assert o.ok and all(f in o.output for f in b.files)
     if b.files:
@@ -23,22 +33,28 @@ for tid in task_ids():
     assert o.ok and not o.done, o.output
     o = e.step(DeskAction(tool='end_episode', args={}))
     assert not o.ok and not o.done
-    o = e.step(DeskAction(tool='submit', args={'answer': b.answer}))
+    o = give(e, b.answer)
     good = o.done and o.reward == 1.0
     # answer passed as a JSON string
     e.reset(seed=7, task_id=tid)
-    o2 = e.step(DeskAction(tool='submit', args={'answer': json.dumps(b.answer) if not isinstance(b.answer, str) else b.answer}))
+    o2 = give(e, json.dumps(b.answer) if not isinstance(b.answer, str) else b.answer)
     # finish action (empty answer) and a wrong answer
     e.reset(seed=7, task_id=tid)
     o3 = e.step(DeskAction(tool='submit', args={'answer': ''}))
     e.reset(seed=7, task_id=tid)
-    o4 = e.step(DeskAction(tool='submit', args={'answer': b.wrong[0]})) if b.wrong and b.wrong[0] != b.answer else None
+    o4 = give(e, b.wrong[0]) if b.wrong and b.wrong[0] != b.answer else None
+    if deliv:
+        # the right content passed as the submit answer (not written to the file) earns nothing
+        e.reset(seed=7, task_id=tid)
+        o6 = e.step(DeskAction(tool='submit', args={'answer': b.answer}))
+        assert o6.done and o6.reward == 0.0, tid
     # budget exhaustion
     e.reset(seed=7, task_id=tid)
     for _ in range(b.budget):
         o5 = e.step(DeskAction(tool='list_files', args={}))
     ok = (good and o2.reward == 1.0 and o3.done and o3.reward == 0.0 and (o4 is None or (o4.done and o4.reward == 0.0))
           and o5.done and o5.reward == 0.0)
+    e.close()
     bad += not ok
     print(f"{tid:24s} ref={o.reward} json={o2.reward} finish={o3.reward} wrong={o4.reward if o4 else '-'} budget_end={o5.done},{o5.reward}")
 print('EPISODES BAD', bad)

@@ -72,9 +72,10 @@ def parse_task_id(task_id):
 
 
 # The v4 training list submitted to the arena: every new file-deliverable task (60%) plus the v3 tasks of the
-# domains that already scored (software, industrial, office, finance) so they do not regress (40%).
+# domains that already scored (software, industrial, office, finance) so they do not regress (36%).
 _KEEP_V3 = {"software-engineering", "industrial-physical-systems", "office-white-collar", "finance-economics"}
-_DROP_V3 = {"fifo-basis-L1", "bond-desk-L1"}
+# The arena accepts at most 50 tasks per submission: 32 new + 18 v3.
+_DROP_V3 = {"fifo-basis-L1", "bond-desk-L1", "line-oee-L2", "npv-choice-L1", "meeting-slot-L1"}
 
 
 def _round_robin(ids):

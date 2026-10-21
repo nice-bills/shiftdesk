@@ -17,8 +17,9 @@ natural science, math and formal reasoning, cybersecurity, and media. Each asks 
 (`output/results.csv`, `output/incident.json`, `output/out.srt`, `output/article.html`, ...) that hidden
 checks grade on submit. All 47 v3 answer-style tasks are still served.
 
-The training list (`in_training_list` in `tasks.jsonl`) has 53 tasks: the 32 new ones (60%) interleaved with
-21 v3 tasks from software, industrial, office and finance (40%), so the domains that already score keep training.
+The training list (`in_training_list` in `tasks.jsonl`) has 50 tasks, the arena's maximum: the 32 new ones (64%)
+interleaved with 18 v3 tasks from software, industrial, office and finance (36%), so the domains that already
+score keep training.
 Every reset generates a fresh instance from a seeded generator, so there are no fixed answer keys and this
 dataset holds none: `tasks.jsonl` lists each task id with a seed-0 example question, its deliverable path or
 answer format, and its file names.
